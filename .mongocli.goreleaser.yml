@@ -18,9 +18,9 @@ builds:
     id: macos
     goos: [darwin]
     goarch: [amd64,arm64]
-    hooks:
+#    hooks:
       # This will notarize Apple binaries and replace goreleaser bins with the notarized ones
-      post: ./build/package/mongocli_mac_notarize.sh
+#      post: ./build/package/mongocli_mac_notarize.sh
   - <<: *build_defaults
     id: linux
     goos: [linux]
@@ -77,7 +77,11 @@ changelog:
     - '^task:'
     - '^build(deps):'
 release:
+  github:
+    owner: andreaangiolillo
+    name: mongocli
+  draft: true
   prerelease: auto
   name_template: "MongoDB CLI {{.Version}}"
-  extra_files:
-    - glob: ./bin/*.msi
+#  extra_files:
+#    - glob: ./bin/*.msi
