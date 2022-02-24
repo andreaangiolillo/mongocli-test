@@ -18,9 +18,9 @@ builds:
     id: macos
     goos: [darwin]
     goarch: [amd64,arm64]
-    hooks:
+#    hooks:
       # This will notarize Apple binaries and replace goreleaser bins with the notarized ones
-      post: ./build/package/atlascli_mac_notarize.sh
+#      post: ./build/package/atlascli_mac_notarize.sh
   - <<: *build_defaults
     id: linux
     goos: [linux]
@@ -80,7 +80,11 @@ changelog:
     - '^task:'
     - '^build(deps):'
 release:
+  github:
+    owner: andreaangiolillo
+    name: mongocli
+  draft: true
   prerelease: true
   name_template: "MongoDB Atlas CLI {{.Version}}"
-  extra_files:
-    - glob: ./bin/*.msi
+#  extra_files:
+#    - glob: ./bin/*.msi
