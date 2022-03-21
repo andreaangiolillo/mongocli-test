@@ -55,7 +55,7 @@ func (opts *DescribeOpts) Run() error {
 	return opts.Print(r)
 }
 
-// mongocli atlas alerts describe <ID> --projectId projectId.
+// DescribeBuilder mongocli atlas alerts describe <ID> --projectId projectId
 func DescribeBuilder() *cobra.Command {
 	opts := new(DescribeOpts)
 	cmd := &cobra.Command{
