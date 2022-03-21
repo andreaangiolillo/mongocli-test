@@ -91,4 +91,4 @@ release:
 source:
   # Whether this pipe is enabled or not.
   # Defaults to `false`
-  enabled: false
+  enabled: true
