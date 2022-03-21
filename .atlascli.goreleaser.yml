@@ -6,6 +6,7 @@ monorepo:
 before:
   hooks:
     - go mod tidy
+    - touch test.json
 
 builds:
   - <<: &build_defaults
