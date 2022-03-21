@@ -82,7 +82,7 @@ changelog:
 release:
   github:
     owner: andreaangiolillo
-    name: mongocli
+    name: mongocli-test
   draft: true
   prerelease: true
   name_template: "MongoDB Atlas CLI {{.Version}}"
