@@ -19,7 +19,7 @@ package atlas
 import (
 	"io"
 
-	"go.mongodb.org/atlas-sdk/v20231115002/admin"
+	"go.mongodb.org/atlas-sdk/v20231115007/admin"
 )
 
 //go:generate mockgen -destination=../../mocks/atlas/mock_data_federation.go -package=atlas github.com/andreaangiolillo/mongocli-test/internal/store/atlas DataFederationLister,DataFederationDescriber,DataFederationStore,DataFederationCreator,DataFederationUpdater,DataFederationDeleter,DataFederationLogDownloader

@@ -33,7 +33,7 @@ import (
 	"github.com/containers/podman/v4/libpod/define"
 	"github.com/golang/mock/gomock"
 	"github.com/stretchr/testify/assert"
-	atlasv2 "go.mongodb.org/atlas-sdk/v20231115002/admin"
+	atlasv2 "go.mongodb.org/atlas-sdk/v20231115007/admin"
 )
 
 var indexID = "6509bc5080b2f007e6a2a0ce"

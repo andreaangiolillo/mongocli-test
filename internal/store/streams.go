@@ -15,7 +15,7 @@
 package store
 
 import (
-	atlasv2 "go.mongodb.org/atlas-sdk/v20231115002/admin"
+	atlasv2 "go.mongodb.org/atlas-sdk/v20231115007/admin"
 )
 
 //go:generate mockgen -destination=../mocks/mock_streams.go -package=mocks github.com/andreaangiolillo/mongocli-test/internal/store StreamsLister,StreamsDescriber,StreamsCreator,StreamsDeleter,StreamsUpdater,ConnectionCreator,ConnectionDeleter,ConnectionUpdater,StreamsConnectionDescriber,StreamsConnectionLister

@@ -30,7 +30,7 @@ import (
 	"github.com/containers/podman/v4/libpod/define"
 	"github.com/golang/mock/gomock"
 	"github.com/stretchr/testify/assert"
-	"go.mongodb.org/atlas-sdk/v20231115002/admin"
+	"go.mongodb.org/atlas-sdk/v20231115007/admin"
 	"go.mongodb.org/atlas/mongodbatlas"
 )
 

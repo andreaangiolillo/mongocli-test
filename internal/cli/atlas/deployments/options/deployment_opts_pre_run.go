@@ -23,7 +23,7 @@ import (
 	"github.com/andreaangiolillo/mongocli-test/internal/cli"
 	"github.com/andreaangiolillo/mongocli-test/internal/log"
 	"github.com/shirou/gopsutil/v3/host"
-	"go.mongodb.org/atlas-sdk/v20231115002/admin"
+	"go.mongodb.org/atlas-sdk/v20231115007/admin"
 	"go.mongodb.org/atlas/mongodbatlas"
 )
 

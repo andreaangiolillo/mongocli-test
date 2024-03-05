@@ -27,7 +27,7 @@ import (
 	"github.com/andreaangiolillo/mongocli-test/internal/config"
 	"github.com/andreaangiolillo/mongocli-test/internal/log"
 	"github.com/mongodb-forks/digest"
-	atlasv2 "go.mongodb.org/atlas-sdk/v20231115002/admin"
+	atlasv2 "go.mongodb.org/atlas-sdk/v20231115007/admin"
 	atlasauth "go.mongodb.org/atlas/auth"
 	atlas "go.mongodb.org/atlas/mongodbatlas"
 )

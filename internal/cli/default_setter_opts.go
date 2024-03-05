@@ -28,7 +28,7 @@ import (
 	"github.com/andreaangiolillo/mongocli-test/internal/telemetry"
 	"github.com/andreaangiolillo/mongocli-test/internal/validate"
 	"github.com/briandowns/spinner"
-	atlasv2 "go.mongodb.org/atlas-sdk/v20231115002/admin"
+	atlasv2 "go.mongodb.org/atlas-sdk/v20231115007/admin"
 	atlas "go.mongodb.org/atlas/mongodbatlas"
 	"go.mongodb.org/ops-manager/opsmngr"
 )

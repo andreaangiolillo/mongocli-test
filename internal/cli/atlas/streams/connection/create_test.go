@@ -24,7 +24,7 @@ import (
 	"github.com/golang/mock/gomock"
 	"github.com/spf13/afero"
 	"github.com/stretchr/testify/require"
-	atlasv2 "go.mongodb.org/atlas-sdk/v20231115002/admin"
+	atlasv2 "go.mongodb.org/atlas-sdk/v20231115007/admin"
 )
 
 func TestCreate_Run(t *testing.T) {

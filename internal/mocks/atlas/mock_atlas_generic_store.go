@@ -9,7 +9,7 @@ import (
 
 	gomock "github.com/golang/mock/gomock"
 	atlas "github.com/andreaangiolillo/mongocli-test/internal/store/atlas"
-	admin "go.mongodb.org/atlas-sdk/v20231115002/admin"
+	admin "go.mongodb.org/atlas-sdk/v20231115007/admin"
 )
 
 // MockOperatorGenericStore is a mock of OperatorGenericStore interface.

@@ -16,7 +16,7 @@ package atlas
 
 import (
 	"github.com/andreaangiolillo/mongocli-test/internal/pointer"
-	"go.mongodb.org/atlas-sdk/v20231115002/admin"
+	"go.mongodb.org/atlas-sdk/v20231115007/admin"
 )
 
 //go:generate mockgen -destination=../../mocks/atlas/mock_alert_configuration.go -package=atlas github.com/andreaangiolillo/mongocli-test/internal/store/atlas AlertConfigurationLister,AlertConfigurationCreator,AlertConfigurationDeleter,AlertConfigurationUpdater,MatcherFieldsLister,AlertConfigurationEnabler,AlertConfigurationDisabler,AlertConfigurationDescriber

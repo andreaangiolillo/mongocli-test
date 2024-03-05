@@ -23,7 +23,7 @@ import (
 	mocks "github.com/andreaangiolillo/mongocli-test/internal/mocks/atlas"
 	"github.com/andreaangiolillo/mongocli-test/internal/test"
 	"github.com/golang/mock/gomock"
-	"go.mongodb.org/atlas-sdk/v20231115002/admin"
+	"go.mongodb.org/atlas-sdk/v20231115007/admin"
 )
 
 func TestCreate_Run(t *testing.T) {

@@ -25,7 +25,7 @@ import (
 	store "github.com/andreaangiolillo/mongocli-test/internal/store/atlas"
 	"github.com/andreaangiolillo/mongocli-test/internal/usage"
 	"github.com/spf13/cobra"
-	atlasv2 "go.mongodb.org/atlas-sdk/v20231115002/admin"
+	atlasv2 "go.mongodb.org/atlas-sdk/v20231115007/admin"
 )
 
 const listTemplate = `ID	NAME{{range .Results}}

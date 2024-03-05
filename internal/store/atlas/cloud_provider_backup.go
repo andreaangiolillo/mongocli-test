@@ -18,7 +18,7 @@ import (
 	"fmt"
 
 	"github.com/andreaangiolillo/mongocli-test/internal/config"
-	atlasv2 "go.mongodb.org/atlas-sdk/v20231115002/admin"
+	atlasv2 "go.mongodb.org/atlas-sdk/v20231115007/admin"
 )
 
 //go:generate mockgen -destination=../../mocks/atlas/mock_cloud_provider_backup.go -package=atlas github.com/andreaangiolillo/mongocli-test/internal/store/atlas ScheduleDescriber

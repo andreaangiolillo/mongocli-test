@@ -18,7 +18,7 @@ import (
 	"fmt"
 
 	"github.com/andreaangiolillo/mongocli-test/internal/config"
-	"go.mongodb.org/atlas-sdk/v20231115002/admin"
+	"go.mongodb.org/atlas-sdk/v20231115007/admin"
 	atlas "go.mongodb.org/atlas/mongodbatlas"
 	"go.mongodb.org/ops-manager/opsmngr"
 )

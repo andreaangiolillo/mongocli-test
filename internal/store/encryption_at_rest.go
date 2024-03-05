@@ -18,7 +18,7 @@ import (
 	"fmt"
 
 	"github.com/andreaangiolillo/mongocli-test/internal/config"
-	atlasv2 "go.mongodb.org/atlas-sdk/v20231115002/admin"
+	atlasv2 "go.mongodb.org/atlas-sdk/v20231115007/admin"
 )
 
 //go:generate mockgen -destination=../mocks/mock_encryption_at_rest.go -package=mocks github.com/andreaangiolillo/mongocli-test/internal/store EncryptionAtRestDescriber

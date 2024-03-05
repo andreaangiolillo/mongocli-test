@@ -19,7 +19,7 @@ import (
 	"github.com/andreaangiolillo/mongocli-test/internal/mocks"
 	"github.com/andreaangiolillo/mongocli-test/internal/pointer"
 	"github.com/golang/mock/gomock"
-	"go.mongodb.org/atlas-sdk/v20231115002/admin"
+	"go.mongodb.org/atlas-sdk/v20231115007/admin"
 )
 
 func NewMockAtlasDeploymentOpts(ctrl *gomock.Controller, deploymentName string) MockDeploymentOpts {

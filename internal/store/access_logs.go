@@ -19,7 +19,7 @@ import (
 	"strconv"
 
 	"github.com/andreaangiolillo/mongocli-test/internal/config"
-	atlasv2 "go.mongodb.org/atlas-sdk/v20231115002/admin"
+	atlasv2 "go.mongodb.org/atlas-sdk/v20231115007/admin"
 	atlas "go.mongodb.org/atlas/mongodbatlas"
 )
 

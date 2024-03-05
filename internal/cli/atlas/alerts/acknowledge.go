@@ -27,7 +27,7 @@ import (
 	customTime "github.com/andreaangiolillo/mongocli-test/internal/time"
 	"github.com/andreaangiolillo/mongocli-test/internal/usage"
 	"github.com/spf13/cobra"
-	"go.mongodb.org/atlas-sdk/v20231115002/admin"
+	"go.mongodb.org/atlas-sdk/v20231115007/admin"
 )
 
 type AcknowledgeOpts struct {

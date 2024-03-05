@@ -28,7 +28,7 @@ import (
 	"github.com/andreaangiolillo/mongocli-test/internal/usage"
 	"github.com/andreaangiolillo/mongocli-test/internal/validate"
 	"github.com/spf13/cobra"
-	"go.mongodb.org/atlas-sdk/v20231115002/admin"
+	"go.mongodb.org/atlas-sdk/v20231115007/admin"
 )
 
 const updateTemplate = "Successfully updated database user '{{.Username}}'.\n"

@@ -21,7 +21,7 @@ import (
 
 	"github.com/andreaangiolillo/mongocli-test/internal/mocks"
 	"github.com/golang/mock/gomock"
-	atlasv2 "go.mongodb.org/atlas-sdk/v20231115002/admin"
+	atlasv2 "go.mongodb.org/atlas-sdk/v20231115007/admin"
 )
 
 func TestDBUserCreateOpts_Run(t *testing.T) {

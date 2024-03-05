@@ -31,7 +31,7 @@ import (
 	"github.com/containers/podman/v4/libpod/define"
 	"github.com/golang/mock/gomock"
 	"github.com/stretchr/testify/assert"
-	atlasv2 "go.mongodb.org/atlas-sdk/v20231115002/admin"
+	atlasv2 "go.mongodb.org/atlas-sdk/v20231115007/admin"
 )
 
 func TestDescribe_RunLocal(t *testing.T) {

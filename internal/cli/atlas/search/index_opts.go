@@ -22,7 +22,7 @@ import (
 	"github.com/andreaangiolillo/mongocli-test/internal/file"
 	"github.com/andreaangiolillo/mongocli-test/internal/pointer"
 	"github.com/spf13/afero"
-	atlasv2 "go.mongodb.org/atlas-sdk/v20231115002/admin"
+	atlasv2 "go.mongodb.org/atlas-sdk/v20231115007/admin"
 )
 
 const DefaultAnalyzer = "lucene.standard"

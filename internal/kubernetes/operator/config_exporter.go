@@ -28,7 +28,7 @@ import (
 	"github.com/andreaangiolillo/mongocli-test/internal/kubernetes/operator/resources"
 	"github.com/andreaangiolillo/mongocli-test/internal/store"
 	"github.com/andreaangiolillo/mongocli-test/internal/store/atlas"
-	atlasv2 "go.mongodb.org/atlas-sdk/v20231115002/admin"
+	atlasv2 "go.mongodb.org/atlas-sdk/v20231115007/admin"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/runtime/serializer/json"
 	"k8s.io/client-go/kubernetes/scheme"

@@ -24,7 +24,7 @@ import (
 	"github.com/andreaangiolillo/mongocli-test/internal/pointer"
 	"github.com/andreaangiolillo/mongocli-test/internal/randgen"
 	"github.com/andreaangiolillo/mongocli-test/internal/telemetry"
-	atlasv2 "go.mongodb.org/atlas-sdk/v20231115002/admin"
+	atlasv2 "go.mongodb.org/atlas-sdk/v20231115007/admin"
 )
 
 func (opts *Opts) createDatabaseUser() error {

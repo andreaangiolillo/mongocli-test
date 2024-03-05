@@ -15,7 +15,7 @@
 package atlas
 
 import (
-	"go.mongodb.org/atlas-sdk/v20231115002/admin"
+	"go.mongodb.org/atlas-sdk/v20231115007/admin"
 )
 
 //go:generate mockgen -destination=../../mocks/atlas/mock_events.go -package=atlas github.com/andreaangiolillo/mongocli-test/internal/store/atlas OrganizationEventLister,ProjectEventLister,EventLister

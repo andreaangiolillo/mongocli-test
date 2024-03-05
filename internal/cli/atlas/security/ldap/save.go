@@ -27,7 +27,7 @@ import (
 	"github.com/andreaangiolillo/mongocli-test/internal/telemetry"
 	"github.com/andreaangiolillo/mongocli-test/internal/usage"
 	"github.com/spf13/cobra"
-	atlasv2 "go.mongodb.org/atlas-sdk/v20231115002/admin"
+	atlasv2 "go.mongodb.org/atlas-sdk/v20231115007/admin"
 )
 
 type SaveOpts struct {
