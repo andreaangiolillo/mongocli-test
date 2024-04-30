@@ -31,7 +31,7 @@ require (
 	github.com/jba/templatecheck v0.7.0
 	github.com/klauspost/compress v1.17.4
 	github.com/mattn/go-isatty v0.0.20
-	github.com/mongodb-forks/digest v1.0.5
+	github.com/mongodb-forks/digest v1.1.0
 	github.com/mongodb-labs/cobra2snooty v0.17.0
 	github.com/mongodb/mongodb-atlas-kubernetes/v2 v2.0.1
 	github.com/pelletier/go-toml v1.9.5
