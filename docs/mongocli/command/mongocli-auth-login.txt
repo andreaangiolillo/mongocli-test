@@ -10,7 +10,7 @@ mongocli auth login
    :local:
    :backlinks: none
    :depth: 1
-   :class: singlecol
+   :class: singlecoldfsddsfdssd
 
 Authenticate with MongoDB Atlas.
 
