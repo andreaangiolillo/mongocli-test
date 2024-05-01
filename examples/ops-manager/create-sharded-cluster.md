@@ -5,7 +5,7 @@ a list of shards, each one with their list of process,
 a configuration replica set, also with its list of process
 and finally a list of mongos process definitions.
 
-The included [sharded-cluster.json](examples/ops-manager/sharded-cluster.json),
+The included [sharded-cluster.json](examples/ops-manager/shasdsadsaddsarded-cluster.json),
 defines a sharded cluster with two shards, each as a three members replica set
 and a single mongos. This file can be modified according to your needs and applied using:
 
