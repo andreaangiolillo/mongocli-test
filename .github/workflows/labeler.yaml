@@ -46,7 +46,6 @@ jobs:
         if: env.review_needed == 'true'
         with:
           header: pr-title-slack-doc
-          recreate: true
           message: "APIx Bot :bowtie:: a message has been sent to Docs Slack channel :rocket:."
       - name: Send the notification
         run: |
