@@ -4,6 +4,9 @@ on:
     types: [opened, edited]
   pull_request:
     types:
+      - opened
+      - reopened
+      - synchronize
       - ready_for_review
   workflow_dispatch:
 jobs:
