@@ -23,6 +23,7 @@ jobs:
           use_local_config: true
           config_path: .github/labeler.yaml
   slack-notification-doc-team:
+    needs: labeler
     runs-on: ubuntu-latest
     permissions:
       pull-requests: write # Needed by sticky-pull-request-comment
