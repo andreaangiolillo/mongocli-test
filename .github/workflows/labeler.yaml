@@ -51,4 +51,8 @@ jobs:
           message: "APIx Bot :bowtie:: a message has been sent to Docs Slack channel :rocket:."
       - name: Send the notification
         run: |
-          echo "comment output: ${{ steps.append_comment.outputs.previous_comment_id }}"
+          # Update the code to add an if statement to check if steps.append_comment.outputs.previous_comment_id is not empty
+          if [ -n "${{ steps.append_comment.outputs.previous_comment_id }}" ]; then
+            echo "previous comment ID: ${{ steps.append_comment.outputs.previous_comment_id }}"
+          fi
+
