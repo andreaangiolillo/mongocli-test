@@ -12,18 +12,16 @@ on:
   workflow_dispatch:
 jobs:
   labeler:
+    env:
+      GITHUB_TOKEN: ${{ secrets.TEST_TT }}
     name: Add Label to PRs and Issues
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      pull-requests: write # Needed by labeler
-      issues: write # Needed by labeler
     steps:
       - name: Checkout your code
         uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11
       - uses: srvaroa/labeler@1eec6d9e7c5fa5864840279978680302f955fc37
         env:
-          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+          GITHUB_TOKEN: "${{ secrets.TEST_TT }}"
         with:
           use_local_config: true
           config_path: .github/labeler.yaml

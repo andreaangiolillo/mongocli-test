@@ -10,8 +10,8 @@ on:
 jobs:
   slack-notification-doc-team:
     runs-on: ubuntu-latest
-    env:
-      GITHUB_TOKEN: ${{ secrets.TEST_TT }}
+    permissions:
+      pull-requests: write # Needed by sticky-pull-request-comment
     steps:
       - name: Print PR labels
         env:
