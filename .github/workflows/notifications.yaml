@@ -18,7 +18,7 @@ jobs:
     steps:
       - name: Print PR labels
         env:
-          labels: ${{ toJSON(github.event.pull_request_target.labels) }
+          labels: ${{ toJSON(github.event.pull_request_target.labels) }}
         run: |
           if [ -n "${{ github.event.pull_request_target }}" ]; then
             echo "PR labels: ${{labels}}"
