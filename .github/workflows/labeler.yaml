@@ -35,12 +35,11 @@ jobs:
           REPO_NAME: ${{ github.event.repository.name }}
           PULL_REQUEST_NUMBER: ${{ github.event.pull_request.number }}
         run: |
-          labels="$(gh api repos/$OWNER/$REPO_NAME/pulls/$PULL_REQUEST_NUMBER --jq '.labels.[].name')"
+          labels=$(gh api repos/"$OWNER"/"$REPO_NAME"/pulls/"$PULL_REQUEST_NUMBER" --jq '.labels.[].name')
           echo "Labels: $labels"
-          if echo $labels | grep -q "need-doc-review"; then
-            echo "review_needed=true" >> $GITHUB_ENV
+          if echo "$labels" | grep -q "need-doc-review"; then
+            echo "review_needed=true" >> "$GITHUB_ENV"
           fi
-
       - uses: marocchino/sticky-pull-request-comment@331f8f5b4215f0445d3c07b4967662a32a2d3e31
         if: env.review_needed == 'true'
         with:
