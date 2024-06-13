@@ -4,6 +4,9 @@ on:
     types: [opened, edited]
   pull_request:
     types:
+      - opened
+      - reopened
+      - synchronize
       - ready_for_review
   workflow_dispatch:
 jobs:
@@ -43,9 +46,13 @@ jobs:
         if: env.review_needed == 'true'
         with:
           header: pr-title-slack-doc
-          hide_and_recreate: true
-          hide_classify: "OUTDATED"
           message: "APIx Bot :bowtie:: a message has been sent to Docs Slack channel :rocket:."
       - name: Send the notification
-        run: |
-          echo "comment output: ${{ steps.append_comment.outputs.previous_comment_id }}"
+        if: env.review_needed == 'true' && steps.append_comment.outputs.previous_comment_id == ''
+        run: echo "Sending the notification to the Docs Slack channel"
+#          # Update the code to add an if statement to check if steps.append_comment.outputs.previous_comment_id is not empty
+#          if [ -n "${{ steps.append_comment.outputs.previous_comment_id }}" ]; then
+#            echo "previous comment ID: ${{ steps.append_comment.outputs.previous_comment_id }}"
+#          fi
+
+
