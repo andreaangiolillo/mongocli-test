@@ -4,9 +4,6 @@ on:
     types: [opened, edited]
   pull_request:
     types:
-      - opened
-      - reopened
-      - synchronize
       - ready_for_review
   workflow_dispatch:
 jobs:
@@ -44,7 +41,12 @@ jobs:
         if: env.review_needed == 'true'
         with:
           header: pr-title-slack-doc
-          delete: true
+      - name: Skip if message is already sent
+        run: |
+          if grep -q "APIx Bot :bowtie:: a message has been sent to Docs Slack channel :rocket:." "$GITHUB_EVENT_PATH"; then
+            echo "Message already sent, skipping"
+            exit 0
+          fi
       - uses: marocchino/sticky-pull-request-comment@331f8f5b4215f0445d3c07b4967662a32a2d3e31
         if: env.review_needed == 'true'
         with:
