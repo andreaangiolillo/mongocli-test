@@ -19,11 +19,11 @@ jobs:
       - name: Print PR labels
         run: |
           if [ -n "${{ github.event.pull_request_target }}" ]; then
-            echo "PR labels: ${{ github.event.pull_request_target.labels }}"
+            echo "PR labels: ${{ toJSON(github.event.pull_request_target.labels) }}"
           fi
           
           if [ -n "${{ github.event.pull_request }}" ]; then
-            echo "PR labels: ${{ github.event.pull_request.labels }}"
+            echo "PR labels: ${{ toJSON(github.event.pull_request.labels) }}"
           fi          
 
       - uses: marocchino/sticky-pull-request-comment@331f8f5b4215f0445d3c07b4967662a32a2d3e31
