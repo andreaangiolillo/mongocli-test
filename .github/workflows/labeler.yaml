@@ -48,9 +48,11 @@ jobs:
           header: pr-title-slack-doc
           message: "APIx Bot :bowtie:: a message has been sent to Docs Slack channel :rocket:."
       - name: Send the notification
+        if: env.review_needed == 'true' && steps.append_comment.outputs.previous_comment_id == ''
         run: |
-          # Update the code to add an if statement to check if steps.append_comment.outputs.previous_comment_id is not empty
-          if [ -n "${{ steps.append_comment.outputs.previous_comment_id }}" ]; then
-            echo "previous comment ID: ${{ steps.append_comment.outputs.previous_comment_id }}"
-          fi
+#          # Update the code to add an if statement to check if steps.append_comment.outputs.previous_comment_id is not empty
+#          if [ -n "${{ steps.append_comment.outputs.previous_comment_id }}" ]; then
+#            echo "previous comment ID: ${{ steps.append_comment.outputs.previous_comment_id }}"
+#          fi
+          echo "Sending the notification to the Docs Slack channel"
 
