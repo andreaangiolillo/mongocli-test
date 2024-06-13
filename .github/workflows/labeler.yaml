@@ -1,53 +1,53 @@
-name: PRs and Issue Labeler
-on:
-  issues:
-    types: [opened, edited]
-  pull_request:
-    types:
-      - opened
-      - reopened
-      - synchronize
-      - ready_for_review
-  workflow_dispatch:
-jobs:
-  labeler:
-    env:
-      GITHUB_TOKEN: ${{ secrets.TEST_TT }}
-    name: Add Label to PRs and Issues
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout your code
-        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11
-      - uses: srvaroa/labeler@1eec6d9e7c5fa5864840279978680302f955fc37
-        with:
-          use_local_config: true
-          config_path: .github/labeler.yaml
-  slack-notification-doc-team:
-    needs: labeler
-    runs-on: ubuntu-latest
-    permissions:
-      pull-requests: write # Needed by sticky-pull-request-comment
-    steps:
-      - name: Get PR labels
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          OWNER: ${{ github.repository_owner }}
-          REPO_NAME: ${{ github.event.repository.name }}
-          PULL_REQUEST_NUMBER: ${{ github.event.pull_request.number }}
-        run: |
-          labels=$(gh api repos/"$OWNER"/"$REPO_NAME"/pulls/"$PULL_REQUEST_NUMBER" --jq '.labels.[].name')
-          echo "Labels: $labels"
-          if echo "$labels" | grep -q "need-doc-review"; then
-            echo "review_needed=true" >> "$GITHUB_ENV"
-          fi
-      - uses: marocchino/sticky-pull-request-comment@331f8f5b4215f0445d3c07b4967662a32a2d3e31
-        if: env.review_needed == 'true'
-        with:
-          header: pr-title-slack-doc
-          delete: true
-      - uses: marocchino/sticky-pull-request-comment@331f8f5b4215f0445d3c07b4967662a32a2d3e31
-        if: env.review_needed == 'true'
-        with:
-          header: pr-title-slack-doc
-          append: true
-          message: "APIx Bot :bowtie:: a message has been sent to Docs Slack channel :rocket:."
+#name: PRs and Issue Labeler
+#on:
+#  issues:
+#    types: [opened, edited]
+#  pull_request:
+#    types:
+#      - opened
+#      - reopened
+#      - synchronize
+#      - ready_for_review
+#  workflow_dispatch:
+#jobs:
+#  labeler:
+#    env:
+#      GITHUB_TOKEN: ${{ secrets.TEST_TT }}
+#    name: Add Label to PRs and Issues
+#    runs-on: ubuntu-latest
+#    steps:
+#      - name: Checkout your code
+#        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11
+#      - uses: srvaroa/labeler@1eec6d9e7c5fa5864840279978680302f955fc37
+#        with:
+#          use_local_config: true
+#          config_path: .github/labeler.yaml
+#  slack-notification-doc-team:
+#    needs: labeler
+#    runs-on: ubuntu-latest
+#    permissions:
+#      pull-requests: write # Needed by sticky-pull-request-comment
+#    steps:
+#      - name: Get PR labels
+#        env:
+#          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#          OWNER: ${{ github.repository_owner }}
+#          REPO_NAME: ${{ github.event.repository.name }}
+#          PULL_REQUEST_NUMBER: ${{ github.event.pull_request.number }}
+#        run: |
+#          labels=$(gh api repos/"$OWNER"/"$REPO_NAME"/pulls/"$PULL_REQUEST_NUMBER" --jq '.labels.[].name')
+#          echo "Labels: $labels"
+#          if echo "$labels" | grep -q "need-doc-review"; then
+#            echo "review_needed=true" >> "$GITHUB_ENV"
+#          fi
+#      - uses: marocchino/sticky-pull-request-comment@331f8f5b4215f0445d3c07b4967662a32a2d3e31
+#        if: env.review_needed == 'true'
+#        with:
+#          header: pr-title-slack-doc
+#          delete: true
+#      - uses: marocchino/sticky-pull-request-comment@331f8f5b4215f0445d3c07b4967662a32a2d3e31
+#        if: env.review_needed == 'true'
+#        with:
+#          header: pr-title-slack-doc
+#          append: true
+#          message: "APIx Bot :bowtie:: a message has been sent to Docs Slack channel :rocket:."
