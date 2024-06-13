@@ -37,19 +37,15 @@ jobs:
           if echo "$labels" | grep -q "need-doc-review"; then
             echo "review_needed=true" >> "$GITHUB_ENV"
           fi
-      - uses: marocchino/sticky-pull-request-comment@331f8f5b4215f0445d3c07b4967662a32a2d3e31
+      - name: Add Message to the PR
+        id: append_comment
+        uses: marocchino/sticky-pull-request-comment@331f8f5b4215f0445d3c07b4967662a32a2d3e31
         if: env.review_needed == 'true'
         with:
           header: pr-title-slack-doc
-      - name: Skip if message is already sent
-        run: |
-          if grep -q "APIx Bot :bowtie:: a message has been sent to Docs Slack channel :rocket:." "$GITHUB_EVENT_PATH"; then
-            echo "Message already sent, skipping"
-            exit 0
-          fi
-      - uses: marocchino/sticky-pull-request-comment@331f8f5b4215f0445d3c07b4967662a32a2d3e31
-        if: env.review_needed == 'true'
-        with:
-          header: pr-title-slack-doc
-          append: true
+          hide_and_recreate: true
+          hide_classify: "OUTDATED"
           message: "APIx Bot :bowtie:: a message has been sent to Docs Slack channel :rocket:."
+      - name: Send the notification
+        run: |
+          echo "comment output: ${{ steps.append_comment.outputs.previous_comment_id }}"
